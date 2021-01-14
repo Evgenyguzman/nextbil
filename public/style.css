@@ -1,0 +1,131 @@
+/** Base **/
+
+body{
+  margin: 0;
+  padding: 0;
+}
+*{
+  outline: none;
+}
+h1,h2,h3,h4,h5,h6,p,span,input, label, a{
+  font-family: Roboto;
+}
+a{
+  color: #0094FF;
+  text-decoration: none;
+}
+
+.input-icon{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 52px;
+  display: flex;
+  padding: 0 14px 0 18px;
+  box-sizing: border-box;
+}
+
+.radiobox-group{
+  margin-bottom: 24px; 
+  display: flex;
+}
+
+span.validation-msg{
+  position: absolute;
+  margin-left: 18px;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  font: normal normal normal 10px/13px Roboto;
+}
+span.result{
+  display: block;
+  padding: 6px 0;
+}
+span.error{
+  color: #E82828;
+}
+span.success{
+  color: #2dd60f;
+}
+
+
+
+/** Custom Select **/
+
+.custom-select {
+  position: relative;
+}
+.custom-select-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 18px 84px 15px 18px;
+  font: normal normal normal 14px/17px Roboto;
+  background: #F5F8FA 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.custom-select-trigger:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 5px; height: 5px;
+  top: 50%; right: 25px;
+  margin-top: -3px;
+  border-bottom: 1px solid #222;
+  border-right: 1px solid #222;
+  transform: rotate(45deg) translateY(-50%);
+  transition: all .4s ease-in-out;
+  transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%; left: 0; right: 0;
+  min-width: 100%;
+  max-height: 170px;
+  overflow-y: scroll;
+  margin: 6px 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 8px #00000026;
+  transition: all .4s ease-in-out;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+}
+
+.custom-options::-webkit-scrollbar { width: 0; }
+.custom-options { -ms-overflow-style: none; }
+.custom-options { scrollbar-width: none; }
+
+.custom-select.opened .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
+  z-index: 1;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 19px;
+  font: normal normal normal 14px/32px Roboto;
+  color: #222222;
+  line-height: 32px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.custom-option:hover,
+.custom-option.selection {
+  background: #F5F8FA 0% 0% no-repeat padding-box;
+}
