@@ -28,7 +28,7 @@ export const Button = ({ children, ...props }: any) => {
 
 export const StyledButton = styled.button`
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   background: #0094ff 0% 0% no-repeat padding-box;
   border-radius: 31px;
   font: normal normal normal 18px/22px Roboto;

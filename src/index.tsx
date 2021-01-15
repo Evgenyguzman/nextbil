@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 // TODO - customize design of radiobox and checkbox
-// TODO - describe interfaces for component props
+// TODO - describe interfaces for components props
 // TODO - get countries list via open API
 
 // TODO - add components to storybook
